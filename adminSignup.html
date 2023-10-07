@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="adminSignup.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script>
+      var app = angular.module('App', []);
+
+app.controller('formCtrl', function ($scope) {
+     $scope.username="Enter your username";
+     $scope.name="Enter your name";
+     $scope.emailID="Enter your email ID";
+     
+
+
+});
+
+
+
+    //   function get_data(){
+    //      var username = document.getElementById("username").value
+    //      var name = document.getElementById("name").value
+    //      var email = document.getElementById("emailID").value
+    //      var mobile_number = document.getElementById("mobile_number").value
+    //      var password = document.getElementById("password").value
+    //      var year = document.getElementById("year").value
+    //      var userDetails = {"username":username,"name":name,"email":email,"mobileNumber":mobile_number,"password":password,"year":year} 
+    //     console.log(userDetails)
+    //     var users=localStorage.getItem("users")
+    //     var user=JSON.parse(users||"[]")
+    //     user.push(userDetails)
+    //     localStorage.setItem("users",JSON.stringify(user))
+    //     }
+        function redirect(){
+            return true
+
+        }
+        function validemail()
+                {
+                    var email1=document.myform.emailID.value;
+                    var atposition=email1.indexOf("@");
+                    var dotposition=email1.lastIndexOf(".");
+                    if(atposition<1 || dotposition< atposition+2 || dotposition+2>=email1.length)
+                    {
+                        alert("please provide valid email");
+                        return false;
+                    }
+                }
+        
+    </script>
+</head>
+<body>
+    <div class="form" >
+    <p><b>SIGN UP</b></p>
+    <form name="myform" onsubmit="return redirect() && validemail()" action="adsignup.php" method="post">
+    <pre>
+        <input required type="text" name="username" id="username" placeholder="Username"><input required type="text" name="name" id="name" placeholder="Name">
+        <input required type="email" name="emailID" id="emailID" placeholder="EmailID"><input required type="number" name="mobile_number" id="mobile_number" placeholder="Enter your mobile number" >
+        <input required type="password" pattern="[0-9a-zA-Z@]{8,}" name="password" id="password" placeholder="Enter password (min 8 characters)"><select name="year" id="year" placeholder="year"><option value="" selected hidden disabled>Select year</option> <option value="First">First</option> <option value="Second">Second</option> <option value="Third">Third</option> <option value="Fourth">Fourth</option> </select>    
+        <button type="submit" name="submit" style="background-color: #31527f; color: orange; font-weight: bolder;">SUBMIT</button><button style="background-color: #31527f; color: orange; font-weight: bolder;" type="reset">RESET</button>
+        </pre>
+        <p class="message">Already registered? <a href="adminlogin.html">Back to login</a></p>
+    </form>
+    </div>
+    </body>
+    </html>

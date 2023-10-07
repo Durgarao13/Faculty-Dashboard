@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+
+ <style>
+
+ 
+    
+    body{
+        padding: 0;
+        margin: 0;
+        background: url(wll.jpg)no-repeat;
+        background-size: cover;
+    
+    }
+    
+    .form b{
+        font-size: 20px;
+    }
+    .form{
+        font-family: "Roboto", sans-serif;
+        position: relative;
+        background: #FFFFFF;
+        opacity: 95%;
+        max-width: 260px;
+        max-height: 400px;
+        margin: 200px auto 100px;
+        padding: 10px 45px 30px 45px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        border-radius: 10px;
+    }
+    
+    .form p{
+        font-size: 15px;
+        padding: 1px;
+        text-align: center;
+    }
+    .form input{
+        outline: 0;
+        border-radius: 10px;
+        background: #F2F2F2;
+        width: 100%;
+        border: 0;
+        margin: 0 0 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+    .form input:hover{
+        background-color: #D3F8F9;
+        transition: all 1s ease 0s;
+    }
+    .form input:focus{
+        background-color: #D3F8F9;
+        transition: all 1s ease 0s;
+    }
+    .form button{
+        text-transform: uppercase;
+        outline: 0;
+        border-radius: 10px;
+        background: #31527f;
+        width: 100%;
+        border: 0;
+        padding: 15px;
+        color: #FFFFFF;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .form button:hover, .form button:active, .form button:focus{
+        background-color: #325482;
+        transition: all 1s ease 0s;
+    }
+    .form .message{
+        margin: 15px 0 0;
+        color: black;
+        font-size: 12px;
+    }
+    .form .message a{
+        color: #0963e1;
+        text-decoration: none;
+    }
+</style>
+
+</head>
+<body>
+    <center>
+    <table cellspacing="10">
+        <tr>
+            <td ><br><br><br><br><br><img src="L1.png" alt="logo"></td>
+            <td><div class="form">
+                <p><b>LOGIN</b></p>
+                <form action="adlogin.php"  method="post">
+                    <input required type="text" id="username" name="username" placeholder="Username">
+                    <input required type="password" id="password" name="password" placeholder="Password">
+                    <p class="message"><a href="forgot.php">Forgot password?</a></p><br>
+                    <button required type ="submit"  style="background-color: #31527f; color: orange; font-weight: bolder;" >Login</button>
+                    <p class="message">Not registered? <a href="adminSignup.html">Create an account</a></p>
+                </form>
+                </div></td>
+        </tr>
+    
+
+</table></center>
+
+</body> 
+</html>
